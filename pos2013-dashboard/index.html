@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS 201.3 Dashboard - Al Rkn Al Raqy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>POS 201.3 Dashboard</h1>
+            <p class="merchant-name">Al Rkn Al Raqy Hotel Management LLC</p>
+        </div>
+        <div class="header-actions">
+            <input type="text" id="searchInput" placeholder="Search code, merchant, status...">
+            <a href="daily_summary.html" class="btn-secondary" style="text-decoration: none;">Daily Summary</a>
+            <button id="refreshBtn" class="btn-secondary">Refresh</button>
+            <button id="downloadCsvBtn" class="btn-secondary">Download CSV</button>
+            <button id="pairTerminalBtn" class="btn-primary">Pair Terminal</button>
+            <a href="users.html" id="userManagementBtn" class="btn-secondary" style="text-decoration: none; display: none;">Manage Users</a>
+            <button id="logoutBtn" class="btn-secondary">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="stats-container">
+            <div class="stat-card">
+                <h3>Total Transactions</h3>
+                <p id="totalCount">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Amount</h3>
+                <p id="totalAmount">AED 0.00</p>
+            </div>
+        </section>
+
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Created At</th>
+                        <th>Code</th>
+                        <th>Amount</th>
+                        <th>Currency</th>
+                        <th>Terminal</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionTableBody">
+                    <!-- Transactions will be loaded here -->
+                </tbody>
+            </table>
+            <div class="pagination"> 
+                <div class="pagination-controls">
+                    <button id="prevPageBtn" class="btn-secondary">Previous</button> 
+                    <span id="pageInfo">Page 1 of 1</span> 
+                    <button id="nextPageBtn" class="btn-secondary">Next</button> 
+                </div>
+            
+                <select id="pageSizeSelect" class="select-secondary"> 
+                    <option value="10">10 rows</option> 
+                    <option value="25">25 rows</option> 
+                    <option value="50">50 rows</option> 
+                    <option value="100">100 rows</option> 
+                </select> 
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for QR Code -->
+    <div id="qrModal" class="modal"> 
+        <div class="modal-content"> 
+            <h2>Scan to Pair Terminal</h2> 
+            <div id="qrcode"></div> 
+            <button id="closeQrBtn" class="btn-secondary">Close</button> 
+        </div> 
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

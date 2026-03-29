@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    android:padding="24dp"> 
+ 
+    <LinearLayout 
+        android:orientation="vertical" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"> 
+ 
+        <TextView 
+            android:text="Terminal Settings" 
+            android:textSize="22sp" 
+            android:textStyle="bold" 
+            android:layout_marginBottom="24dp" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"/> 
+ 
+        <!-- Merchant ID --> 
+        <TextView 
+            android:text="Merchant ID" 
+            android:textStyle="bold" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"/> 
+ 
+        <TextView 
+            android:id="@+id/merchantIdText" 
+            android:text="-" 
+            android:textSize="16sp" 
+            android:layout_marginBottom="16dp" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"/> 
+ 
+        <!-- Terminal ID --> 
+        <TextView 
+            android:text="Terminal ID" 
+            android:textStyle="bold" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"/> 
+ 
+        <TextView 
+            android:id="@+id/terminalIdText" 
+            android:text="-" 
+            android:textSize="16sp" 
+            android:layout_marginBottom="16dp" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"/> 
+ 
+        <!-- API Key --> 
+        <TextView 
+            android:text="API Key" 
+            android:textStyle="bold" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"/> 
+ 
+        <TextView 
+            android:id="@+id/apiKeyText" 
+            android:text="********" 
+            android:textSize="16sp" 
+            android:layout_marginBottom="24dp" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"/> 
+ 
+        <!-- Buttons --> 
+        <com.google.android.material.button.MaterialButton 
+            android:id="@+id/scanQrBtn" 
+            android:text="Scan QR to Pair" 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"/> 
+ 
+        <com.google.android.material.button.MaterialButton 
+            android:id="@+id/clearBtn" 
+            android:text="Clear Credentials" 
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_marginTop="16dp" 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content"/> 
+ 
+    </LinearLayout> 
+</ScrollView> 

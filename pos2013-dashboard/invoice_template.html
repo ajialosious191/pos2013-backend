@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<style> 
+body { 
+    font-family: Arial, sans-serif; 
+    padding: 20px; 
+    width: 320px; 
+    background: white;
+} 
+
+body[dir="rtl"] { 
+    direction: rtl; 
+    text-align: right; 
+} 
+ 
+#logo { 
+    width: 120px; 
+    display: block; 
+    margin: 0 auto 10px auto; 
+} 
+ 
+h2 { 
+    text-align: center; 
+    margin-bottom: 10px; 
+    color: {{brandColor}}; 
+} 
+ 
+.line { 
+    border-bottom: 1px dashed #999; 
+    margin: 10px 0; 
+} 
+ 
+.row { 
+    display: flex; 
+    justify-content: space-between; 
+    margin: 6px 0; 
+} 
+ 
+.item-row { 
+    display: flex; 
+    justify-content: space-between; 
+    margin: 4px 0; 
+    font-size: 14px; 
+} 
+ 
+.item-header { 
+    font-weight: bold; 
+    border-bottom: 1px solid #ccc; 
+    padding-bottom: 4px; 
+} 
+ 
+.footer { 
+    text-align: center; 
+    margin-top: 20px; 
+    font-size: 12px; 
+    color: #555; 
+} 
+</style> 
+</head> 
+<body> 
+ 
+<img id="logo" src="{{logoUrl}}" alt="Merchant Logo" onerror="this.style.display='none'"> 
+ 
+<h2>{{merchantName}}</h2> 
+ 
+<div class="line"></div> 
+ 
+<div class="row"><strong>Invoice #:</strong> <span id="invoiceId"></span></div> 
+<div class="row"><strong>Date:</strong> <span id="date"></span></div> 
+ 
+<div class="line"></div> 
+ 
+<div class="item-header row"> 
+    <span>Item</span> 
+    <span>Qty</span> 
+    <span>Price</span> 
+</div> 
+ 
+<div id="itemsContainer"></div> 
+ 
+<div class="line"></div> 
+ 
+<div class="row"><strong>Subtotal:</strong> <span id="subtotal"></span></div> 
+<div class="row"><strong>Tax:</strong> <span id="tax"></span></div> 
+<div class="row"><strong>Discount:</strong> <span id="discount"></span></div> 
+ 
+<div class="line"></div> 
+ 
+<div class="row"><strong>Total:</strong> <span id="total"></span></div> 
+ 
+<div class="line"></div> 
+ 
+<div class="footer">Thank you for your purchase</div> 
+ 
+</body> 
+</html> 

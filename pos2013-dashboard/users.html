@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Al Rkn Al Raqy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .user-form {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #4a5568;
+            font-size: 14px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .back-link {
+            text-decoration: none;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>User Management</h1>
+            <p class="merchant-name">Al Rkn Al Raqy Hotel Management LLC</p>
+        </div>
+        <div class="header-actions">
+            <button id="logoutBtn" class="btn-secondary">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-link">← Back to Dashboard</a>
+
+        <section class="user-form">
+            <h3>Add New User</h3>
+            <div class="form-group">
+                <label for="newEmail">Email</label>
+                <input type="email" id="newEmail" placeholder="user@example.com">
+            </div>
+            <div class="form-group">
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" placeholder="••••••••">
+            </div>
+            <div class="form-group">
+                <label for="newRole">Role</label>
+                <select id="newRole">
+                    <option value="owner">Owner (Full Access)</option>
+                    <option value="manager">Manager (View + Reports)</option>
+                    <option value="accountant">Accountant (Reports + CSV)</option>
+                    <option value="viewer" selected>Viewer (Read-only)</option>
+                </select>
+            </div>
+            <button id="addUserBtn" class="btn-primary">Create User</button>
+            <p id="message" style="margin-top: 10px; font-size: 14px;"></p>
+        </section>
+
+        <section class="table-container">
+            <h3>Active Users</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Created At</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <!-- Users will be loaded here if we add a list endpoint later -->
+                    <tr><td colspan="3" style="text-align: center; color: #718096; padding: 20px;">User listing coming soon...</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="users.js"></script>
+</body>
+</html>

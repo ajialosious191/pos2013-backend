@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:padding="16dp" 
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content"> 
+ 
+    <TextView 
+        android:id="@+id/codeText" 
+        android:text="123456" 
+        android:textStyle="bold" 
+        android:textSize="18sp" 
+        android:layout_width="0dp" 
+        android:layout_height="wrap_content" 
+        app:layout_constraintStart_toStartOf="parent" 
+        app:layout_constraintTop_toTopOf="parent"/> 
+ 
+    <TextView 
+        android:id="@+id/amountText" 
+        android:text="AED 20.13" 
+        android:textSize="16sp" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        app:layout_constraintEnd_toEndOf="parent" 
+        app:layout_constraintTop_toTopOf="@id/codeText"/> 
+ 
+    <TextView 
+        android:id="@+id/dateText" 
+        android:text="28 Mar 2026, 18:45" 
+        android:textSize="14sp" 
+        android:textColor="#666" 
+        android:layout_width="0dp" 
+        android:layout_height="wrap_content" 
+        app:layout_constraintStart_toStartOf="@id/codeText" 
+        app:layout_constraintTop_toBottomOf="@id/codeText"/> 
+ 
+    <TextView 
+        android:id="@+id/statusText" 
+        android:text="Pending" 
+        android:textSize="14sp" 
+        android:textColor="#D32F2F" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        app:layout_constraintEnd_toEndOf="@id/amountText" 
+        app:layout_constraintTop_toBottomOf="@id/amountText"/> 
+ 
+</androidx.constraintlayout.widget.ConstraintLayout> 
